@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sldevtalks_flutter_00/pages/about.dart';
@@ -13,7 +14,9 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("SLDevTalks"),
-        actions: [Switch(value: isDark ?? false, onChanged: toggleDarkMode)],
+        actions: [
+          CupertinoSwitch(value: isDark ?? false, onChanged: toggleDarkMode)
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
