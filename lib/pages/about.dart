@@ -25,6 +25,18 @@ class _AboutState extends State<About> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final AboutArguments args =
         ModalRoute.of(context)?.settings.arguments as AboutArguments;

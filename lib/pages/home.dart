@@ -4,13 +4,16 @@ import 'package:sldevtalks_flutter_00/pages/about.dart';
 
 class Home extends StatelessWidget {
   static const routeName = "/home";
-  const Home({Key? key}) : super(key: key);
+  final Function(bool)? toggleDarkMode;
+  final bool? isDark;
+  const Home({Key? key, this.toggleDarkMode, this.isDark}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("SLDevTalks"),
+        actions: [Switch(value: isDark ?? false, onChanged: toggleDarkMode)],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
