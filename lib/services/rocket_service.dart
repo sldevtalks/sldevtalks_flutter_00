@@ -13,4 +13,14 @@ class RocketService {
       return Rocket.fromJSON(jsonDecode(response.body));
     }
   }
+
+  static Future<List<Rocket>?> getRockets() async {
+    final response = await http.get(Uri.parse("${Config.BACKEND_URL}rockets"));
+
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body).map<Rocket>((data) {
+        return Rocket.fromJSON(data);
+      }).toList();
+    }
+  }
 }

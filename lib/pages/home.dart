@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sldevtalks_flutter_00/pages/about.dart';
 import 'package:sldevtalks_flutter_00/pages/rocket.dart';
+import 'package:sldevtalks_flutter_00/pages/rockets.dart';
 
 class Home extends StatelessWidget {
   static const routeName = "/home";
@@ -67,6 +68,12 @@ class Home extends StatelessWidget {
               Navigator.of(context).pushNamed(RocketPage.routeName);
             },
             child: Text("Rocket"),
+          ),
+          OutlinedButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed(Rockets.routeName);
+            },
+            child: Text("Rockets"),
           )
         ],
       ),
