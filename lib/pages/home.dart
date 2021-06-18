@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sldevtalks_flutter_00/pages/about.dart';
-import 'package:sldevtalks_flutter_00/pages/rocket.dart';
 import 'package:sldevtalks_flutter_00/pages/rockets.dart';
 
 class Home extends StatelessWidget {
@@ -62,12 +61,6 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-          OutlinedButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed(RocketPage.routeName);
-            },
-            child: Text("Rocket"),
           ),
           OutlinedButton(
             onPressed: () {

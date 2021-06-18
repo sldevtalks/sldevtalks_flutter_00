@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sldevtalks_flutter_00/data/rocket.dart';
+import 'package:sldevtalks_flutter_00/pages/rocket.dart';
 
 class RocketsList extends StatelessWidget {
   late final List<Rocket> rockets;
@@ -23,6 +24,11 @@ class RocketsList extends StatelessWidget {
               rocket.firstFlight,
               style: Theme.of(context).textTheme.subtitle1,
             ),
+            trailing: Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.of(context).pushNamed(RocketPage.routeName,
+                  arguments: RocketArguments(rocket: rocket));
+            },
           ),
         );
       },
