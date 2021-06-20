@@ -57,7 +57,7 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.ac_unit),
-                  Text(" About"),
+                  Flexible(child: Text(" About")),
                 ],
               ),
             ),
