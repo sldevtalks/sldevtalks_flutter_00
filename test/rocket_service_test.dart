@@ -36,6 +36,6 @@ void main() {
     final response = await RocketService.getRocket(mockClient);
 
     // Assert
-    expect(response?.id, '5e9d0d95eda69973a809d1ec2');
+    expect(response?.id, '5e9d0d95eda69973a809d1ec');
   });
 }
