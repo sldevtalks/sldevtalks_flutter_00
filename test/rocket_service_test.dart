@@ -19,13 +19,19 @@ const Map<String, dynamic> rocketResponse = {
 };
 
 void main() {
+  late MockClient mockClient;
+  late RocketService rocketService;
+
   setUpAll(() {
     registerFallbackValue(Uri.parse(''));
+
+    mockClient = MockClient();
+    rocketService = RocketService.internal(mockClient);
   });
 
   test('Rocket service test', () async {
     // Arrange
-    final mockClient = MockClient();
+
     when(() {
       return mockClient.get(any());
     }).thenAnswer((invocation) async {
@@ -33,7 +39,7 @@ void main() {
     });
 
     // Act
-    final response = await RocketService.getRocket(mockClient);
+    final response = await rocketService.getRocket();
 
     // Assert
     expect(response?.id, '5e9d0d95eda69973a809d1ec');

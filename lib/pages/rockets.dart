@@ -5,7 +5,11 @@ import 'package:sldevtalks_flutter_00/services/rocket_service.dart';
 
 class Rockets extends StatelessWidget {
   static const String routeName = '/rockets';
-  const Rockets({Key? key}) : super(key: key);
+  final RocketService _rocketService;
+
+  Rockets({Key? key})
+      : _rocketService = RocketService(),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +18,7 @@ class Rockets extends StatelessWidget {
         title: Text("Rockets"),
       ),
       body: FutureBuilder<List<Rocket>?>(
-        future: RocketService.getRockets(),
+        future: _rocketService.getRockets(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(
