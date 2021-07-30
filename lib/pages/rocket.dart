@@ -20,7 +20,7 @@ class RocketPage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Rocket',
           ),
         ),
@@ -28,14 +28,14 @@ class RocketPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               width: double.infinity,
             ),
             Text(
               rocket.name,
               style: Theme.of(context).textTheme.headline3,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
@@ -43,7 +43,7 @@ class RocketPage extends StatelessWidget {
               style: Theme.of(context).textTheme.headline5,
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Image.network(rocket.image)

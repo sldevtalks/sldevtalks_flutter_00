@@ -8,13 +8,14 @@ class Home extends StatelessWidget {
   static const routeName = "/home";
   final Function(bool)? toggleDarkMode;
   final bool? isDark;
+
   const Home({Key? key, this.toggleDarkMode, this.isDark}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SLDevTalks"),
+        title: const Text("SLDevTalks"),
         actions: [
           CupertinoSwitch(value: isDark ?? false, onChanged: toggleDarkMode)
         ],
@@ -23,15 +24,15 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 0,
             width: double.infinity,
           ),
-          Image(
+          const Image(
             image: AssetImage("assets/images/logo.png"),
             width: 90,
           ),
-          Text(
+          const Text(
             "ආයුබෝවන් SLDevTalks!",
             style: TextStyle(
               fontSize: 40,
@@ -45,17 +46,14 @@ class Home extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () async {
-              String text = await Navigator.of(context).pushNamed(
-                  About.routeName,
+              await Navigator.of(context).pushNamed(About.routeName,
                   arguments: AboutArguments(name: "Devs")) as String;
-
-              print(text);
             },
             child: SizedBox(
               width: 80,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   Icon(Icons.ac_unit),
                   Flexible(child: Text(" About")),
                 ],
@@ -66,7 +64,7 @@ class Home extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).pushNamed(Rockets.routeName);
             },
-            child: Text("Rockets"),
+            child: const Text("Rockets"),
           )
         ],
       ),

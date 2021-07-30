@@ -4,7 +4,7 @@ import 'package:sldevtalks_flutter_00/main.dart';
 
 void main() {
   testWidgets('Home', (tester) async {
-    await tester.pumpWidget(SLDevTalksApp());
+    await tester.pumpWidget(const SLDevTalksApp());
 
     expect(find.text(' About'), findsOneWidget);
 

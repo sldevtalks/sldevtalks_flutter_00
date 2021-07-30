@@ -5,8 +5,8 @@ import 'package:sldevtalks_flutter_00/pages/rocket.dart';
 import 'package:sldevtalks_flutter_00/pages/rockets.dart';
 
 final Map<String, WidgetBuilder> routes = {
-  Home.routeName: (_) => Home(),
-  About.routeName: (_) => About(),
-  RocketPage.routeName: (_) => RocketPage(),
+  Home.routeName: (_) => const Home(),
+  About.routeName: (_) => const About(),
+  RocketPage.routeName: (_) => const RocketPage(),
   Rockets.routeName: (_) => Rockets(),
 };

@@ -31,14 +31,14 @@ class _AboutState extends State<About> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("About"),
+        title: const Text("About"),
       ),
       body: Container(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               width: double.infinity,
             ),
             Text(
@@ -53,12 +53,12 @@ class _AboutState extends State<About> {
                 onPressed: () {
                   Navigator.of(context).pop("From about");
                 },
-                child: Text("Home"))
+                child: const Text("Home"))
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: onIncrement,
       ),
     );

@@ -4,10 +4,12 @@ import 'package:sldevtalks_flutter_00/routes.dart';
 import 'package:sldevtalks_flutter_00/theme.dart';
 
 void main() {
-  runApp(SLDevTalksApp());
+  runApp(const SLDevTalksApp());
 }
 
 class SLDevTalksApp extends StatefulWidget {
+  const SLDevTalksApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   _SLDevTalksAppState createState() => _SLDevTalksAppState();
